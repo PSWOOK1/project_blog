@@ -1,3 +1,4 @@
+@charset "UTF-8";
 div,
 input,
 textarea {
@@ -21,7 +22,6 @@ body {
   padding: 1% 10.5%;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(132, 132, 132, 0.546);
   width: 100%;
   position: fixed;
   z-index: 5;
@@ -48,7 +48,7 @@ body {
 .main-header-right {
   display: flex;
   height: auto;
-  font-weight: 600;
+  font-weight: 700;
 }
 .main-header-right div,
 .main-header-right i {
@@ -77,6 +77,7 @@ body {
   place-items: center;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .main-body-1-left img {
   width: 100%;
@@ -137,6 +138,7 @@ body {
   display: flex;
   flex-direction: column;
   place-items: center;
+  cursor: pointer;
 }
 .main-body-2-left-content1-item .thum {
   width: 100%;
@@ -145,6 +147,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 10%;
+  transition: all 0.3s;
 }
 .main-body-2-left-content1-item span:nth-of-type(2) {
   font-weight: 700;
@@ -155,6 +158,11 @@ body {
 .main-body-2-left-content1-item span:nth-of-type(3) {
   color: rgb(201, 201, 201);
   margin-right: auto;
+}
+
+.main-body-2-left-content1-item:hover .thum {
+  transform: translateY(-15px);
+  box-shadow: 0px 0px 20px 2px rgb(136, 136, 136);
 }
 
 .font-img {
@@ -194,26 +202,35 @@ body {
 }
 
 .main-body-2-left-content2-item {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   place-items: center;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 15%;
-  padding-bottom: 25%;
+  cursor: pointer;
 }
-.main-body-2-left-content2-item img {
+.main-body-2-left-content2-item .thum {
   width: 100%;
   height: 100%;
   border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10%;
+  transition: all 0.3s;
 }
 .main-body-2-left-content2-item span:nth-of-type(2) {
   font-weight: 700;
   font-size: 18px;
+  margin-bottom: 15%;
+  line-height: 135%;
 }
 .main-body-2-left-content2-item span:nth-of-type(3) {
-  color: grey;
+  color: rgb(201, 201, 201);
   margin-right: auto;
+  margin-bottom: 10%;
+}
+
+.main-body-2-left-content2-item:hover .thum {
+  transform: translateY(-15px);
+  box-shadow: 0px 0px 20px 2px rgb(136, 136, 136);
 }
 
 .Krew {
@@ -228,6 +245,7 @@ body {
   place-items: center;
   margin: 0 auto;
   display: block;
+  margin-top: 15%;
 }
 
 .main-body-2-left-content2-more:hover {
@@ -247,6 +265,8 @@ body {
   border-radius: 20px;
   position: relative;
   background-size: cover;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 .main-body-2-right-content:nth-of-type(2) {
   background-image: url(/img/ft_AI_healthcare.png);
@@ -281,6 +301,21 @@ body {
   font-weight: 700;
 }
 
+.main-body-2-right-content:hover {
+  animation-name: 부웅;
+  animation-duration: 0.3s;
+  transform: translateY(-15px);
+  box-shadow: 0px 0px 20px 2px rgb(136, 136, 136);
+}
+
+@keyframes 부웅 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
 .main-body-2-right-content2-more {
   background-color: white;
   border-radius: 30px;
@@ -327,11 +362,13 @@ body {
   height: 60%;
   font-weight: 900;
   font-size: 14px;
+  cursor: pointer;
 }
 .main-footer-1-1 img {
   width: auto;
   height: 20px;
   margin: 30px 0;
+  cursor: pointer;
 }
 .main-footer-1-1 span {
   height: 50%;
@@ -348,6 +385,7 @@ body {
   margin: 10%;
   color: rgb(153, 153, 153);
   font-weight: 600;
+  cursor: pointer;
 }
 .main-footer-1-2 span:nth-child(1) {
   margin-top: 20%;
@@ -368,6 +406,7 @@ body {
 .main-footer-2 i {
   font-size: 20px;
   margin-left: 30px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1170px) {

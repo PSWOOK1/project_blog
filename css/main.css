@@ -18,25 +18,31 @@ body {
   height: auto;
   background: white;
   display: flex;
-  padding: 1% 10%;
+  padding: 1% 10.5%;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(132, 132, 132, 0.546);
   width: 100%;
+  position: fixed;
+  z-index: 5;
 }
 
 .main-header-left {
   display: flex;
+  place-items: center;
 }
 .main-header-left div {
   width: 88px;
-  height: 30px;
+  height: auto;
   margin-right: 10px;
 }
 .main-header-left img {
-  height: 80%;
+  height: auto;
   width: 100%;
   margin: auto 0;
+}
+.main-header-left img:hover {
+  cursor: pointer;
 }
 
 .main-header-right {
@@ -48,10 +54,14 @@ body {
 .main-header-right i {
   margin-left: 25px;
 }
+.main-header-right :hover {
+  color: rgb(0, 30, 255);
+  cursor: pointer;
+}
 
 .main-body {
+  margin-top: 100px;
   height: 100%;
-  background: rgba(0, 0, 255, 0.315);
   margin-bottom: 20%;
 }
 
@@ -75,15 +85,19 @@ body {
 }
 
 .main-body-1-right {
-  display: grid;
-  place-items: center;
   width: 100%;
   height: 100%;
-}
-.main-body-1-right img {
-  width: 100%;
-  height: 100%;
+  background-image: url(/img/gpt-3-all-you-need-to-know-about-the-ai-language-model-banner.png);
   border-radius: 25px;
+  position: relative;
+  color: white;
+  font-weight: 800;
+  font-size: 40px;
+}
+.main-body-1-right span {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
 }
 
 .main-body-2 {
@@ -92,15 +106,10 @@ body {
   gap: 3%;
 }
 
-.main-body-2-left {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
 .main-body-2-left-title {
   font-size: 23px;
   font-weight: 600;
-  margin-bottom: 5%;
+  margin-bottom: 30px;
 }
 
 .main-body-2-right-title {
@@ -112,7 +121,7 @@ body {
 .main-body-2-left-title2 {
   font-size: 23px;
   font-weight: 600;
-  margin-bottom: 5%;
+  margin-bottom: 30px;
 }
 
 .main-body-2-left-content1 {
@@ -161,6 +170,7 @@ body {
 .middleImg {
   width: 100%;
   height: auto;
+  margin: 10% 0;
 }
 .middleImg img {
   width: 100%;

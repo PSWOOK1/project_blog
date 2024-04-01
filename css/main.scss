@@ -172,6 +172,9 @@ body {
   color: rgba(119, 56, 255);
   font-weight: 600;
   white-space: nowrap;
+  img {
+    padding-right: 10%;
+  }
 }
 
 .middleImg {
@@ -189,6 +192,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: auto;
+  gap: 3%;
 }
 
 .main-body-2-left-content2-item {
@@ -197,12 +201,30 @@ body {
 
   place-items: center;
   width: 100%;
-  height: auto;
+  height: 100%;
+
+  margin-bottom: 15%;
+  padding-bottom: 25%;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    border-radius: 25px;
   }
+
+  span:nth-of-type(2) {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  span:nth-of-type(3) {
+    color: grey;
+    margin-right: auto;
+  }
+}
+
+.Krew {
+  color: rgba(231, 0, 167);
 }
 
 .main-body-2-left-content2-more {
@@ -210,6 +232,7 @@ body {
   border-radius: 30px;
   font-weight: 600;
   width: 10%;
+  height: 70%;
   margin: 0 auto;
 }
 

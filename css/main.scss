@@ -13,9 +13,7 @@ a {
   color: inherit;
 }
 
-@mixin greyColor() {
-  color: rgba(153, 153, 153);
-}
+$greyColor: rgba(153, 153, 153);
 
 @mixin flyCard() {
   transform: translateY(-15px);
@@ -28,7 +26,37 @@ a {
   display: block;
   margin: $btnMargin;
   padding: 15px;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+@mixin font-XL($Color) {
+  color: $Color;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+@mixin font-LG($Color) {
+  color: $Color;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@mixin font-MD($Color) {
+  color: $Color;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@mixin font-SM($Color) {
+  color: $Color;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@mixin font-NM($Color) {
+  color: $Color;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 @keyframes 부웅 {
@@ -85,7 +113,8 @@ a {
   display: flex;
   // width: auto;
   height: auto;
-  font-weight: 700;
+
+  @include font-SM(black);
 
   div,
   i {
@@ -166,9 +195,8 @@ a {
     bottom: 10%;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
       2px 2px 0 #000;
-    color: white;
-    font-weight: 800;
-    font-size: 40px;
+
+    @include font-XL(white);
   }
 }
 
@@ -179,8 +207,7 @@ a {
 }
 
 .content-title {
-  font-size: 23px;
-  font-weight: 600;
+  @include font-LG(black);
   margin-bottom: 30px;
 }
 
@@ -211,14 +238,14 @@ a {
   }
 
   span:nth-of-type(2) {
-    font-weight: 700;
-    font-size: 18px;
+    @include font-MD(black);
     margin-bottom: 15%;
-    line-height: 135%;
+    // line-height: 135%;
   }
 
   span:nth-of-type(3) {
-    color: rgb(201, 201, 201);
+    @include font-SM(rgb(201, 201, 201));
+    font-weight: 500;
     margin-right: auto;
     margin-bottom: 10%;
   }
@@ -233,10 +260,11 @@ a {
   place-items: center;
   margin-right: auto;
   margin-bottom: 5%;
-  width: 25px;
-  height: 24px;
-  color: rgba(119, 56, 255);
-  font-weight: 600;
+  width: 21px;
+  height: 21px;
+
+  @include font-NM(rgba(119, 56, 255));
+
   white-space: nowrap;
   img {
     padding-right: 10%;
@@ -315,8 +343,8 @@ a {
     text-align: left;
     padding-left: 10%;
     box-sizing: border-box;
-    font-size: 18px;
-    font-weight: 700;
+
+    @include font-MD(white);
   }
 }
 
@@ -376,8 +404,8 @@ a {
 
   span {
     height: 50%;
-    @include greyColor();
-    font-weight: 600;
+
+    @include font-NM($greyColor);
   }
 }
 
@@ -390,8 +418,8 @@ a {
     display: flex;
     flex-direction: column;
     margin: 10%;
-    @include greyColor();
-    font-weight: 600;
+
+    @include font-NM($greyColor);
     // cursor: pointer;
   }
 
@@ -399,7 +427,7 @@ a {
     margin-top: 20%;
     margin-bottom: 20%;
     color: white;
-    font-weight: 800;
+    font-weight: 700;
   }
 
   div {
@@ -411,12 +439,13 @@ a {
   display: flex;
   justify-content: space-between;
   place-items: center;
-  @include greyColor();
+
+  @include font-NM($greyColor);
 
   i {
-    font-size: 20px;
     margin-left: 30px;
     cursor: pointer;
+    @include font-LG($greyColor);
   }
 }
 

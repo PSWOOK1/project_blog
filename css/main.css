@@ -55,6 +55,8 @@ a {
 .main-header-right {
   display: flex;
   height: auto;
+  color: black;
+  font-size: 16px;
   font-weight: 700;
 }
 .main-header-right div,
@@ -122,8 +124,8 @@ a {
   bottom: 10%;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
   color: white;
-  font-weight: 800;
   font-size: 40px;
+  font-weight: 700;
 }
 
 .main-body-2 {
@@ -133,8 +135,9 @@ a {
 }
 
 .content-title {
-  font-size: 23px;
-  font-weight: 600;
+  color: black;
+  font-size: 22px;
+  font-weight: 700;
   margin-bottom: 30px;
 }
 
@@ -161,13 +164,16 @@ a {
   transition: all 0.3s;
 }
 .main-body-2-left-content-item span:nth-of-type(2) {
-  font-weight: 700;
+  color: black;
   font-size: 18px;
+  font-weight: 700;
   margin-bottom: 15%;
-  line-height: 135%;
 }
 .main-body-2-left-content-item span:nth-of-type(3) {
   color: rgb(201, 201, 201);
+  font-size: 16px;
+  font-weight: 700;
+  font-weight: 500;
   margin-right: auto;
   margin-bottom: 10%;
 }
@@ -182,10 +188,11 @@ a {
   place-items: center;
   margin-right: auto;
   margin-bottom: 5%;
-  width: 25px;
-  height: 24px;
+  width: 21px;
+  height: 21px;
   color: rgb(119, 56, 255);
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   white-space: nowrap;
 }
 .font-img img {
@@ -261,6 +268,7 @@ a {
   text-align: left;
   padding-left: 10%;
   box-sizing: border-box;
+  color: white;
   font-size: 18px;
   font-weight: 700;
 }
@@ -278,7 +286,7 @@ a {
   display: block;
   margin: 20% auto 0 auto;
   padding: 15px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .main-body-moreBtn:hover {
@@ -318,7 +326,7 @@ a {
   display: block;
   margin: auto auto auto 0;
   padding: 15px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .main-footer-1-1 img {
   height: 20px;
@@ -328,7 +336,8 @@ a {
 .main-footer-1-1 span {
   height: 50%;
   color: rgb(153, 153, 153);
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .main-footer-1-2 {
@@ -340,13 +349,14 @@ a {
   flex-direction: column;
   margin: 10%;
   color: rgb(153, 153, 153);
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
 }
 .main-footer-1-2 span:nth-child(1) {
   margin-top: 20%;
   margin-bottom: 20%;
   color: white;
-  font-weight: 800;
+  font-weight: 700;
 }
 .main-footer-1-2 div {
   width: 180px;
@@ -357,9 +367,13 @@ a {
   justify-content: space-between;
   place-items: center;
   color: rgb(153, 153, 153);
+  font-size: 14px;
+  font-weight: 700;
 }
 .main-footer-2 i {
-  font-size: 20px;
   margin-left: 30px;
   cursor: pointer;
+  color: rgb(153, 153, 153);
+  font-size: 22px;
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */

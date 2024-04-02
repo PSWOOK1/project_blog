@@ -70,3 +70,9 @@ function showSlides() {
 //   autoplay: true,
 //   autoplaySpeed: 2000,
 // });
+
+// 바디 우측 제거
+
+// if (window.matchMedia("(max-width: 992px)").matches) {
+//   document.querySelector(".main-body-1").classList.remove("main-body-1-right");
+// }

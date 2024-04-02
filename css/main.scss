@@ -42,10 +42,10 @@ a {
 
 .slider .slide {
   display: none;
-  width: auto; /* 원하는 너비 */
-  height: auto; /* 원하는 높이 */
-  background-size: cover; /* 이미지가 div를 완전히 덮도록 조정 */
-  background-position: center; /* 이미지가 중앙에 위치하도록 조정 */
+  // width: 100%; /* 원하는 너비 */
+  // height: 100%; /* 원하는 높이 */
+  // background-size: cover; /* 이미지가 div를 완전히 덮도록 조정 */
+  // background-position: center; /* 이미지가 중앙에 위치하도록 조정 */
 }
 
 .slider .slide.active {
@@ -121,41 +121,47 @@ a {
 
 .main-body-1 {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2%;
+  grid-template-columns: 3fr 1.5fr;
+  gap: 3%;
+
+  height: 60vh;
+
   margin-bottom: 5%;
-  width: 1200px;
-  height: 400px;
 }
 
 .main-body-1-left {
-  display: grid;
-  place-items: center;
-  // margin-right: 1%;
+}
+
+.main-body-1-left-item {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    object-fit: cover;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 25px;
+
+  &:nth-of-type(1) {
+    background-image: url(/img/thumnail_healthcare.png);
+  }
+
+  &:nth-of-type(2) {
+    background-image: url(/img/thumnail_hnb.png);
+  }
+
+  &:nth-of-type(3) {
+    background-image: url(/img/thumnail_list-1.png);
   }
 }
 
 .main-body-1-right {
   width: 100%;
   height: 100%;
-  // margin-left: 1%;
   background-image: url(/img/gpt-3-all-you-need-to-know-about-the-ai-language-model-banner.png);
   background-size: cover;
   border-radius: 25px;
   // padding: 40px;
   position: relative;
-
-  color: white;
-  font-weight: 800;
-  font-size: 40px;
+  background-position: center center;
 
   cursor: pointer;
 
@@ -166,6 +172,9 @@ a {
     bottom: 10%;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
       2px 2px 0 #000;
+    color: white;
+    font-weight: 800;
+    font-size: 40px;
   }
 }
 

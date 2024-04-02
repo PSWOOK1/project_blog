@@ -43,3 +43,14 @@ mainHeaderLeft.addEventListener("mouseover", () => {
     }, 500); // 초기 이미지로 복원되기 전에 0.5초 대기
   });
 });
+
+let slideindex = 0;
+const slides = document.querySelectorAll(".slide");
+
+function changeSlide() {
+  slides[slideindex].classList.remove("active");
+  slideindex = (slideindex + 1) % slides.length;
+  slides[slideindex].classList.add("active");
+}
+
+setInterval(changeSlide, 2000); // 초마다 슬라이드 변경

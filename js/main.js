@@ -44,13 +44,29 @@ mainHeaderLeft.addEventListener("mouseover", () => {
   });
 });
 
-let slideindex = 0;
-const slides = document.querySelectorAll(".slide");
+// 메인1 슬라이드 박스 (광고판)
+let slideIndex = 0;
+showSlides();
 
-function changeSlide() {
-  slides[slideindex].classList.remove("active");
-  slideindex = (slideindex + 1) % slides.length;
-  slides[slideindex].classList.add("active");
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("main-body-1-left-item");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.opacity = "0"; // 모든 이미지를 투명하게 만듭니다.
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.opacity = "1"; // 현재 이미지만 불투명하게 만듭니다.
+  setTimeout(showSlides, 4000); // 이미지 전환 간격
 }
 
-setInterval(changeSlide, 2000); // 초마다 슬라이드 변경
+// slick-slide 사용
+
+// $(".main-body-1-left").slick({
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+// });

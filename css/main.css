@@ -22,14 +22,6 @@ a {
     transform: translateY(-15px);
   }
 }
-.slider .slide {
-  display: none;
-}
-
-.slider .slide.active {
-  display: block;
-}
-
 .main-header {
   background: white;
   display: flex;
@@ -85,10 +77,18 @@ a {
   grid-template-columns: 3fr 1.5fr;
   gap: 3%;
   height: 60vh;
-  margin-bottom: 5%;
+  margin-bottom: 15%;
+}
+
+.main-body-1-left {
+  height: 100%;
+  position: relative;
 }
 
 .main-body-1-left-item {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
   width: 100%;
   height: 100%;
   cursor: pointer;

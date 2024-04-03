@@ -10,6 +10,7 @@ window.addEventListener("scroll", function () {
 });
 
 // blog logo
+
 const logos = [
   "/img/logo-blog01.png",
   "/img/logo-blog02.png",
@@ -23,24 +24,28 @@ const logos = [
 ];
 
 let index = 0;
-
 const logoElement = document.querySelector(".logo-cycle");
 const mainHeaderLeft = document.querySelector(".main-header-left");
 
 mainHeaderLeft.addEventListener("mouseover", () => {
+  logoElement.style.transition = "opacity 0.5s";
   const intervalId = setInterval(() => {
-    index = (index + 1) % logos.length; // 다음 이미지로 인덱스 업데이트
-    logoElement.src = logos[index]; // 이미지 소스 변경
-  }, 500); // 밀리초마다 이미지 변경
+    logoElement.style.opacity = 0; // 현재 이미지를 투명하게 만듦
+    setTimeout(() => {
+      index = (index + 1) % logos.length;
+      logoElement.src = logos[index];
+      logoElement.style.opacity = 1; // 다음 이미지를 불투명하게 만듦
+    }, 250); // opacity 전환을 고려한 지연 시간
+  }, 750); // 이미지 전환 주기
 
-  // 마우스가 이미지에서 벗어날 경우 인터벌을 멈춤
+  // mouseout 시 최초 이미지 보이기
   mainHeaderLeft.addEventListener("mouseout", () => {
     clearInterval(intervalId);
-
-    // setTimeout을 사용하여 이미지 변경 전에 약간의 지연을 추가
+    logoElement.style.opacity = 0; // 현재 이미지를 투명하게 만듦
     setTimeout(() => {
       logoElement.src = logos[0];
-    }, 500); // 초기 이미지로 복원되기 전에 0.5초 대기
+      logoElement.style.opacity = 1; // 첫 번째 이미지로 부드럽게 전환
+    }, 250);
   });
 });
 
@@ -76,5 +81,3 @@ function showSlides() {
 // if (window.matchMedia("(max-width: 992px)").matches) {
 //   document.querySelector(".main-body-1").classList.remove("main-body-1-right");
 // }
-
-// 바디2 right slide

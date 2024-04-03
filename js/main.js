@@ -76,3 +76,45 @@ function showSlides() {
 // if (window.matchMedia("(max-width: 992px)").matches) {
 //   document.querySelector(".main-body-1").classList.remove("main-body-1-right");
 // }
+
+// 바디2 right slide
+
+let startX;
+const slider = document.getElementById("slide-container");
+
+slider.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener("touchmove", (e) => {
+  e.preventDefault(); // 스크롤 방지
+  const touchX = e.touches[0].clientX;
+  const difference = startX - touchX;
+
+  if (difference > 50) {
+    // 오른쪽으로 스와이프
+    moveToNextSlide();
+  } else if (difference < -50) {
+    // 왼쪽으로 스와이프
+    moveToPrevSlide();
+  }
+});
+
+function moveToNextSlide() {
+  currentSlide = (currentSlide % totalSlides) + 1;
+  updateSliderPosition();
+}
+
+function moveToPrevSlide() {
+  currentSlide = ((currentSlide - 2 + totalSlides) % totalSlides) + 1;
+  updateSliderPosition();
+}
+
+function updateSliderPosition() {
+  document.querySelectorAll(".slide").forEach((slide, index) => {
+    slide.classList.remove("active-slide");
+    if (index === currentSlide - 1) {
+      slide.classList.add("active-slide");
+    }
+  });
+}

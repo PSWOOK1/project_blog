@@ -1,0 +1,43 @@
+@mixin flyCard() {
+  transform: translateY(-15px);
+  box-shadow: 0px 0px 20px 2px rgb(136, 136, 136);
+}
+
+@mixin moreBtn($btnColor, $btnMargin) {
+  background-color: $btnColor;
+  border-radius: 30px;
+  display: block;
+  margin: $btnMargin;
+  padding: 15px;
+  font-weight: 700;
+}
+
+@mixin font-XL($Color) {
+  color: $Color;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+@mixin font-LG($Color) {
+  color: $Color;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@mixin font-MD($Color) {
+  color: $Color;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@mixin font-SM($Color) {
+  color: $Color;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@mixin font-NM($Color) {
+  color: $Color;
+  font-size: 14px;
+  font-weight: 700;
+}

@@ -155,11 +155,12 @@ a {
   flex-direction: column;
   place-items: center;
   width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 .main-body-2-left-content-item .thum {
   width: 100%;
-  height: 100%;
+  height: 180px;
   border-radius: 25px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -193,7 +194,7 @@ a {
   margin-bottom: 5%;
   width: 21px;
   height: 21px;
-  color: rgb(119, 56, 255);
+  color: black;
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
@@ -225,6 +226,14 @@ a {
 
 .Krew {
   color: rgb(231, 0, 167);
+}
+
+.AI_Healthcare {
+  color: rgb(119, 56, 255);
+}
+
+.Karlo {
+  color: rgb(0, 30, 255);
 }
 
 .main-body-2-right {
@@ -492,7 +501,7 @@ a {
     margin-bottom: 5%;
     width: 21px;
     height: 21px;
-    color: rgb(119, 56, 255);
+    color: black;
     font-size: 14px;
     font-weight: 700;
     white-space: nowrap;
